@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Right Click Event</title>
+</head>
+
+<body>
+
+    <div id="box" style="width: 200px; height: 200px; background-color: lightblue;">
+        Right-click inside this box.
+    </div>
+
+    <script>
+        const box = document.getElementById("box");
+
+        // Add a right-click (contextmenu) event listener to the box
+        box.addEventListener("contextmenu", function (event) {
+            event.preventDefault();  // Prevent the default context menu from appearing
+            alert("Right-click detected!");
+        });
+    </script>
+
+</body>
+
+</html>

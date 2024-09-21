@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Events</title>
+    <style type="text/css">
+        div#text {
+            font-family: Arial;
+            font-size: 1.5em;
+            padding: 25px;
+        }
+
+        body {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="text">
+        <h1>Scroll Events</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quis culpa ducimus,
+            rerum repudiandae maiores repellat veniam illum at quos,
+            non voluptate ullam! Natus provident quia aliquid! In, saepe natus?.</p>
+        <!-- More content to make scrolling possible -->
+    </div>
+
+    <!-- JavaScript -->
+    <script type="text/javascript">
+        // Corrected scroll event listener
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 400) {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            } else {
+                document.body.style.backgroundColor = "white"; // Revert to original background
+                document.body.style.color = "black";           // Revert to original text color
+            }
+        });
+    </script>
+
+</body>
+
+</html>

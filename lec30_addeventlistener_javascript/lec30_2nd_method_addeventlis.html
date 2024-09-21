@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Gallery</title>
+    <link rel="stylesheet" type="text/css" href="stylelec30.css">
+    <style>
+        /* Resetting margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        div#wrapper {
+            margin: 25px auto 0;
+            width: 75%;
+        }
+
+        div#wrapper h1 {
+            display: block;
+            background-color: #203d3a;
+            color: #fff;
+            text-align: center;
+            line-height: 75px;
+            border-radius: 2px 20px 0 0;
+        }
+
+        div#wrapper img {
+            width: 100%;
+            border-radius: 0 0 20px 20px;
+            cursor: pointer;
+            filter: grayscale(100%);
+        }
+
+        div#wrapper img:hover {
+            filter: grayscale(0%);
+        }
+
+        div#block1,
+        div#block2 {
+            width: 100%;
+            float: left;
+            margin-top: 25px;
+        }
+
+        /* CSS for body themes */
+        body.white {
+            background-color: #fff;
+            color: #000;
+        }
+
+        body.black {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Styling the button */
+        #button {
+            margin: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #203d3a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #button.white {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #button.black {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body id="body" class="white">
+    <div id="wrapper">
+
+        <div id="block1">
+            <h1>Enjoy Nature</h1>
+            <img src="path_to_your_image1.jpg" id="img1" alt="Nature Image 1">
+        </div>
+
+        <div id="block2">
+            <h1>Love Nature</h1>
+            <img src="practiceNewFolder/images/img.jpg" id="img2" alt="Nature Image 2">
+        </div>
+
+    </div>
+
+    <!-- Adding a button to toggle themes -->
+    <button id="button" class="black">Toggle Theme</button>
+
+    <script>
+        window.onload = function () {
+            var body = document.getElementById("body");
+            var button = document.getElementById("button");
+
+            // Use addEventListener instead of onclick
+            button.addEventListener('click', function () {
+                if (body.className === "black") {
+                    body.className = "white";
+                    button.className = "black";
+                } else {
+                    body.className = "black";
+                    button.className = "white";
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>

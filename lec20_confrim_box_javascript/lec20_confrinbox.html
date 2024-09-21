@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //confirm box in alert
+
+        //confirm('Do you like this website ?');
+        /*
+        var a = confirm('Do you like this website ?');
+        alert(a);
+        */
+        /*
+        var a = confirm('Do you like this website ?');
+        if (a) {
+            alert('thanks to like this website.');
+        }
+        else {
+            alert('It is ok.');
+        };
+        */
+
+        //Confirm Deletion
+        /*
+                let isConfirmed = confirm("Are you sure you want to delete this item?");
+                if (isConfirmed) {
+                    console.log("Item deleted.");
+                } else {
+                    console.log("Deletion canceled.");
+                }
+        
+                */
+        /*
+                let isLeaving = confirm("You have unsaved changes. Do you really want to leave?");
+                if (isLeaving) {
+                    console.log("Navigating away.");
+                } else {
+                    console.log("Stayed on the page.");
+                }
+                    */
+        /*
+                let confirmLogout = confirm("Are you sure you want to log out?");
+                if (confirmLogout) {
+                    console.log("Logging out...");
+                } else {
+                    console.log("Logout canceled.");
+                }
+                    */
+
+        function confirmExit() {
+            let unsavedChanges = true; // This can be dynamic based on the app's state
+
+            if (unsavedChanges) {
+                let confirmLeave = confirm("You have unsaved changes. Do you really want to leave without saving?");
+
+                if (confirmLeave) {
+                    // Code to exit or navigate away
+                    alert("You chose to leave. Unsaved changes will be lost.");
+                    console.log("User confirmed exit. Navigating away...");
+                } else {
+                    // Code to stay on the page
+                    alert("You chose to stay on the page. Please save your changes.");
+                    console.log("User chose to stay.");
+                }
+            } else {
+                // No unsaved changes, safe to leave
+                alert("No unsaved changes detected. You can safely leave.");
+                console.log("No unsaved changes. Safe to navigate.");
+            }
+        }
+
+        // Call the function to trigger the confirm box
+        confirmExit();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+#header-Title {
+    font-size: 32px;
+    color: #333;
+}
+
+#tagline {
+    color: #555;
+    font-style: italic;
+}
+
+#content {
+    padding: 20px;
+}
+
+ul#items {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#items .list-item {
+    padding: 5px;
+    background-color: #e0e0e0;
+    margin: 5px 0;
+}
+
+ul#items .list-item:nth-child(even) {
+    background-color: #ccc;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}

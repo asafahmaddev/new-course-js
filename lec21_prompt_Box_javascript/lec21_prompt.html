@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //prompt box in javascript
+
+        //prompt('Enter Your Name ?');
+        /*
+                var a = prompt('Enter Your Name ?');
+                alert(a);
+        */
+        /*
+        var a = prompt('Enter Your Name ?');
+        //console.log(a);
+        console.log('welcome to' + a);
+        */
+        /*
+        var a = prompt('Enter number of days');
+        switch (true) {
+        
+            case (a == 1): console.log('Sunday')
+                break;
+        
+            case (a == 2): console.log('Monday')
+                break;
+        
+            case (a == 3): console.log('Tuesday')
+                break;
+        
+            case (a == 4): console.log('wednesday')
+                break;
+        
+            case (a == 5): console.log('Truesday')
+                break;
+        
+            case (a == 6): console.log('Friday')
+                break;
+        
+            case (a == 7): console.log('Saturday')
+                break;
+        
+            default: console.log('Eenter valid day number.')
+        
+        };
+        */
+        /*
+                let input = "";
+                let minLength = 5;
+                let maxLength = 10;
+        
+                do {
+                    input = prompt(`Enter a value between ${minLength} and ${maxLength} characters:`);
+        
+                    if (input.length < minLength) {
+                        alert(`The input is too short. It must be at least ${minLength} characters.`);
+                    } else if (input.length > maxLength) {
+                        alert(`The input is too long. It must be no more than ${maxLength} characters.`);
+                    }
+        
+                } while (input.length < minLength || input.length > maxLength);
+        
+                alert(`Your input is valid: ${input}`);
+                */
+        /*
+ let input = "";
+ let minLength = 3;
+ let maxLength = 8;
+ let validCharacters = /^[a-zA-Z]+$/;  // Only allows alphabetic characters
+
+ do {
+     input = prompt(`Enter a value between ${minLength} and ${maxLength} characters (letters only):`);
+
+     if (input.length < minLength) {
+         alert(`The input is too short. It must be at least ${minLength} characters.`);
+     } else if (input.length > maxLength) {
+         alert(`The input is too long. It must be no more than ${maxLength} characters.`);
+     } else if (!validCharacters.test(input)) {
+         alert("The input contains invalid characters. Only letters are allowed.");
+     }
+
+ } while (input.length < minLength || input.length > maxLength || !validCharacters.test(input));
+
+ alert(`Your input is valid: ${input}`);
+ */
+
+        let universityName = "";
+        let minLength = 15;
+        let maxLength = 30;
+        let validCharacters = /^[a-zA-Z\s]+$/;  // Allows only letters and spaces
+
+        do {
+            universityName = prompt(`Enter a valid university name between ${minLength} and ${maxLength} characters (letters and spaces only):`);
+
+            if (universityName.length < minLength) {
+                alert(`The university name is too short. It must be at least ${minLength} characters.`);
+            } else if (universityName.length > maxLength) {
+                alert(`The university name is too long. It must be no more than ${maxLength} characters.`);
+            } else if (!validCharacters.test(universityName)) {
+                alert("The university name contains invalid characters. Only letters and spaces are allowed.");
+            }
+
+        } while (universityName.length < minLength || universityName.length > maxLength || !validCharacters.test(universityName));
+
+        alert(`University name is valid: ${universityName}`);
+
+    </script>
+</body>
+
+</html>

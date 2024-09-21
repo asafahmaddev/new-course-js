@@ -1,0 +1,109 @@
+<!--window Events-->
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="openWindow()">
+        openWindow
+    </button>
+    <button onclick="closeWindow()">
+        closeWindow
+    </button>
+
+    <script type="text/javascript">
+
+        var mywindow;
+        function openWindow() {
+            mywindow = window.open("http://window.google.com", "", "width = 500px, height=500px, left=200px, top= 200px");
+        }
+        function closeWindow() {
+            mywindow.close()
+        };
+
+    </script>
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events with CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2) inset;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Window Events</h1>
+        <button onclick="openWindow()">Open Window</button>
+        <button onclick="closeWindow()">Close Window</button>
+    </div>
+
+    <script type="text/javascript">
+        var mywindow;
+
+        function openWindow() {
+            mywindow = window.open("http://www.google.com", "", "width=500px, height=500px, left=200px, top=200px");
+        }
+
+        function closeWindow() {
+            if (mywindow) {
+                mywindow.close();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

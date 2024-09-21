@@ -1,0 +1,221 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="lec29style.css">
+    <style>
+        body {
+            font-family: tahoma;
+            font-size: 1.2em;
+
+        }
+
+        div#wrapper {
+            margin: 50px auto 0px auto;
+            width: 80%;
+        }
+
+        div#wrapper>div#button {
+            display: inline-block;
+            line-height: 60px;
+            padding: 0px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .black {
+            color: white;
+            background-color: black;
+        }
+
+        .white {
+            color: black;
+            background-color: white;
+        }
+    </style>
+    <script type="text/JavaScript" src="lec29_husainscpt.js"></script>
+</head>
+
+<body id="" body>
+
+    <div id="wrapper">
+
+        <div id="button" class="black">click & change color</div>
+
+
+        <div id="content">
+
+            <h1>window onload</h1>
+
+            <p>
+                In JavaScript, window.onload is an event handler that executes a function when the entire content
+                of a page (including images, scripts, and stylesheets) has finished loading.
+                This is useful for running code that relies on the DOM being fully loaded
+            </p>
+            <p>
+                Alternative: DOMContentLoaded For cases where you want to execute
+                code as soon as the DOM is fully loaded and parse without waiting for stylesheets, images,
+                and subframes to finish loading, you can use the DOMContentLoaded event.
+                It fires when the initial HTML document has been completely loaded and parsed:
+            </p>
+            <p>
+
+            </p>
+            Alternative: DOMContentLoaded For cases where you want to execute
+            code as soon as the DOM is fully loaded and parse without waiting for stylesheets, images,
+            and subframes to finish loading, you can use the DOMContentLoaded event.
+            It fires when the initial HTML document has been completely loaded and parsed:
+            </p>
+        </div>
+
+
+    </div>
+
+    <script>
+        //window onload
+
+        window.onload = function () {
+
+            var body = document.getElementById("body");
+
+            var button = document.getElementById("button");
+
+            button.onclick = function () {
+
+                if (body.className == "black") {
+
+                    body.className = "white";
+
+                    button.className = "black"
+                }
+                else {
+                    body.className = "black";
+                    button.className = "white";
+                }
+            };
+        };
+
+    </script>
+</body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Onload Example</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            font-size: 1.2em;
+            background-color: black;
+            color: white;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        div#wrapper {
+            margin: 50px auto 0px auto;
+            width: 80%;
+            text-align: center;
+        }
+
+        div#button {
+            display: inline-block;
+            line-height: 60px;
+            padding: 10px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .black {
+            color: white;
+            background-color: black;
+        }
+
+        .white {
+            color: black;
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 2.2em;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body class="black">
+
+    <div id="wrapper">
+
+        <div id="button" class="black">Click & Change Color</div>
+
+        <div id="content">
+            <h1>Window Onload Example</h1>
+
+            <p>
+                In JavaScript, `window.onload` is an event handler that executes a function when the entire content
+                of a page (including images, scripts, and stylesheets) has finished loading.
+                This is useful for running code that relies on the DOM being fully loaded.
+            </p>
+            <p>
+                In JavaScript, `window.onload` is an event handler that executes a function when the entire content
+                of a page (including images, scripts, and stylesheets) has finished loading.
+                This is useful for running code that relies on the DOM being fully loaded.
+            </p>
+            <p>
+                In JavaScript, `window.onload` is an event handler that executes a function when the entire content
+                of a page (including images, scripts, and stylesheets) has finished loading.
+                This is useful for running code that relies on the DOM being fully loaded.
+            </p>
+            An alternative event is `DOMContentLoaded`, which triggers when the HTML document has been completely
+            loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        //window onload
+        window.onload = function () {
+            var body = document.body; // This will select the body element
+            var button = document.getElementById("button");
+
+            button.onclick = function () {
+                // Toggle between black and white background colors
+                if (body.classList.contains("black")) {
+                    body.classList.remove("black");
+                    body.classList.add("white");
+                    button.classList.remove("black");
+                    button.classList.add("white");
+                    button.innerHTML = "Click & Change to Black"; // Change button text
+                } else {
+                    body.classList.remove("white");
+                    body.classList.add("black");
+                    button.classList.remove("white");
+                    button.classList.add("black");
+                    button.innerHTML = "Click & Change to White"; // Change button text
+                }
+            };
+        };
+    </script>
+
+</body>
+
+</html>

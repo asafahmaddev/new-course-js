@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        /* You can add some basic styles for the content */
+        .box {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h2 id="header-Title">Asaf</h2>
+        <p id="tagline">Computer Educator</p>
+    </header>
+
+    <div id="content">
+        <h4>Courses</h4>
+        <ul id="items">
+            <li class="list-item">Graphics</li>
+            <li class="list-item">Web</li>
+            <li class="list-item">Video</li>
+            <li class="list-item">3D</li>
+            <li class="list-item">Computer</li>
+            <li class="list-item">Android</li>
+            <li class="list-item">iPhone</li>
+        </ul>
+        <form>
+            <input type="text" placeholder="Type something">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // Create a new div element
+        var newDiv = document.createElement('div');
+
+        // Add class to the new div
+        newDiv.className = 'box';
+
+        // Add id to the new div
+        newDiv.id = 'textBox';
+
+        // Create a text node
+        var newDivText = document.createTextNode("Asaf will teach all of these courses");
+
+        // Add the text node to the new div
+        newDiv.appendChild(newDivText);
+
+        // Find the #content container and form element to insert the new div before the form
+        var container = document.querySelector('#content');
+        var form = document.querySelector('form');
+
+        // Apply some styles to the new div
+        newDiv.style.color = 'red';
+        newDiv.style.backgroundColor = 'yellow';  // Corrected backgroundColor
+        newDiv.style.border = '3px solid gray';
+        newDiv.style.margin = '30px 90px 20px 0px';
+
+        // Insert the new div before the form inside the #content container
+        container.insertBefore(newDiv, form);
+    </script>
+</body>
+
+</html>

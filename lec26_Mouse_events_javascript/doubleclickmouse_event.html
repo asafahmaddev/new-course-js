@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Double Click Event</title>
+</head>
+<body>
+
+<p id="textParagraph">Double-click me to change my color.</p>
+
+<script>
+  const paragraph = document.getElementById("textParagraph");
+  
+  // Add a double-click event listener to the paragraph
+  paragraph.addEventListener("dblclick", function() {
+    paragraph.style.color = "red";
+  });
+</script>
+
+</body>
+</html>

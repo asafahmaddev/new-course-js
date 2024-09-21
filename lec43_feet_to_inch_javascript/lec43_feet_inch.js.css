@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: tahoma;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40;
+}
+
+#container {
+    margin: 0 auto 0px auto;
+    width: 80%;
+    text-align: center;
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+.input-div {
+    display: inline-block;
+}
+
+.input {
+    padding: 5px 10px;
+    margin: 10px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 20px;
+}
